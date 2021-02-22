@@ -1,0 +1,18 @@
+<%-include("partial/header")%>
+
+<div class="container" style="padding-top: 30px;">
+    <h1>Welcome Tej Narayan Singh</h1>
+    <div style="padding-left: 60px;">
+        <h3>Write Your Blog</h3>
+        <form action="/blog" method="POST">
+            <input style="width: 80%;margin-bottom: 7px;" type="text" name="title" placeholder="Title Of your Blog" required>
+            <input style="width: 80%;margin-bottom: 7px;" type="text" name="image" placeholder="Image Address" required>
+            <textarea style="width: 80%;margin-bottom: 7px;" name="data" rows="10" name="data" placeholder="Blog Content"></textarea>
+            <input style="width: 80%;margin-bottom: 7px;" type="text" name="Author" placeholder="Author Name" required>
+            <input style="width: 80%;margin-bottom: 7px;" type="text" name="Insta_handle" placeholder="Author Instagram Handle" required>
+            <button class="btn btn-secondary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<%-include("partial/footer")%>

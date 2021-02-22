@@ -1,0 +1,76 @@
+h3{
+    color: black;
+}
+body{
+    background-image: "https://computerhindinotes.com/wp-content/uploads/2020/05/361-3612977_website-background-png-tech-background-image-for-website.jpg";
+}
+#logo{
+    width:45px;
+}
+img{
+    width:100%;
+    height: 100%;
+}
+.basic_tile{
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.row{
+    margin:0px;
+}
+span{
+    font-size: x-large;
+    color: black;
+    text-transform: capitalize;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+#contents{
+    width:100%;
+    margin-top: 50px;
+    height:auto;
+    padding: 15px;
+    /* background-color: bisque; */
+}
+.contents_row{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border:2px solid pink;
+}
+#details{
+    background-color: rgb(44, 42, 42);
+    width: 100%;
+    height: 250px;
+    padding: 50px;
+}
+#base_img{
+    margin:0;
+}
+#abc{
+    /* border:2px solid black; */
+    margin-top: 40px;
+}
+#comment_form{
+    margin:20px;
+    /* border:2px solid black; */
+}
+textarea{
+    width:100%;
+}
+.all_comments{
+    margin-left:20px;
+    margin-bottom: 2px;
+    padding-left: 10px;
+    border:0.5px solid black;
+}
+ol{
+    padding-left: 0px;
+    margin-bottom: 3px;
+}
+#details a{
+    color:white;
+}

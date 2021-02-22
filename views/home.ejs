@@ -1,0 +1,63 @@
+<%-include("partial/header")%>
+
+<%
+    const convert = (a,b) =>{
+        return a.substring(0,b)+"...";
+    }
+    var link;
+%>
+
+<div id="bodyy" style="padding-top: 25px;">
+    <div class="container" style="padding-bottom: 30px;"> <!--to take all the contents-->
+        
+        <% if(content){
+            if(content[0]){
+                var cont = content[0] %>
+        
+            <div id="base_div" class="row d-flex align-items-center"> <!--the main of the two contents-->
+                <div class="col-lg-8 col-sm-12" style="float: left;">
+                    <% link = "/content/"+ cont._id %>
+                    <a style="text-decoration: none"href= <%= link %> ><div class="basic_tile">
+                        <img src= <%= cont.image %> alt="jeff-ma" >
+                        <span style="font-size: larger;"><strong><%= cont.title %></strong>--   <%= convert(cont.data,50) %></span>
+
+                    </div></a>
+                </div>
+
+        <% }
+
+            if(content[1]){
+                var cont = content[1] %>
+                <div class="col-lg-4 col-sm-12">
+                    <% link = "/content/"+ cont._id %>
+                    <a style="text-decoration: none"href= <%= link %> ><div class="basic_tile">
+                        <img src= <%= cont.image %> alt="jeff-ma" >
+
+                        <span style="font-size: larger;"><strong><%= cont.title %></strong>--  <%= convert(cont.data,50) %></span>
+
+                    </div>  </a>                  
+                </div>
+            </div>
+        <div id="contents">
+        <% } 
+            let i = 0;
+            content.forEach(function(cont){ 
+                i++;
+                if(i>2){
+                    link = "/content/"+ cont._id %>
+            
+                    <a style="text-decoration: none"href= <%= link %> ><div class="row contents_row"> 
+                        <div class="col-lg-2"><img id="base_img" src = <%= cont.image %> alt="Lorem Ipsum"></div>
+                        <div class="col-lg-10">
+                            <span style="font-size: larger;"> <strong> <%= cont.title %> </strong> <%= convert(cont.data,300) %></span>
+                        </div>
+                    </div></a>
+
+            <% }}) %>
+        </div>
+
+    <%}%>
+    </div>
+</div>
+
+<%-include("partial/footer")%>

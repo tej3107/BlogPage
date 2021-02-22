@@ -1,0 +1,50 @@
+<%-include("partial/header")%>
+
+<div class="container" style="padding-top: 30px;">    
+    <div class="row">
+        <div class="col-12">
+            <img style="width:100%;"src=<%= data.image %> alt=<%= data.title %>>
+        </div>
+    </div>
+    <div>
+        <h1><%=data.title%></h1>
+        <p style="color: blue; float: left;"> Author:&nbsp;</p> <a href=<%= data.Insta_handle %> > <%= data.Author %> </a>
+        <p>
+            <%= data.data %>
+        </p>
+    </div>
+    <hr>
+    <%if(data.comment[0]){%>
+    <div id="abc">
+        
+        <h2>Comment Section</h2>
+            <% data.comment.forEach(function(d){%>
+                <div class="all_comments">
+                    <!-- <hr> -->
+                    <span><%=d.name%></span>
+                    <p style="margin-left: 15px;"><%=d.content%></p>
+                </div>
+
+            <%})%>
+        <hr>
+
+    </div>
+    <%}%>
+    <div class="comments">
+        <h2 style="margin: 0; margin-top: 50px;">Leave a Comment</h2>
+        <p>Your Email will not be published</p>
+        <div id="comment_form">
+            <% link = "/comments/" + data._id%>
+            <form action=<%=link%> method="POST">
+                <textarea name="content" id="" cols="" rows="7" placeholder="Write a comment Here..." required></textarea>
+                <input style="width:25%; margin-right: 5px; float:left;" type="text" placeholder="Name*" name="name" required>
+                <input style="width:35%; margin-right: 10px; margin-bottom: 10px;" type="email" name="email" id="email" placeholder="Email*" required>
+                <br><button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    
+</div>
+
+<%-include("partial/footer")%>
